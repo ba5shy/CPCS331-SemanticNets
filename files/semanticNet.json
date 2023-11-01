@@ -1,1 +1,69 @@
 
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    { "id": "KAU" },
+    { "id": "FCIT" },
+    { "id": "SCIENCES" },
+    { "id": "ENG" },
+    { "id": "FCIT_Department" },
+    { "id": "SCIENCES_Department" },
+    { "id": "ENG_Department" },
+    { "id": "CS" },
+    { "id": "IT" },
+    { "id": "IS" },
+    { "id": "Physics" },
+    { "id": "Chemistry" },
+    { "id": "Biology" },
+    { "id": "Mechanical ENG" },
+    { "id": "Computer ENG" },
+    { "id": "Industrial ENG" }
+  ],
+  "links": [
+    { "relationship": "contains", "source": "KAU", "target": "FCIT" },
+    { "relationship": "contains", "source": "KAU", "target": "SCIENCES" },
+    { "relationship": "contains", "source": "KAU", "target": "ENG" },
+    { "relationship": "has", "source": "FCIT", "target": "FCIT_Department" },
+    {
+      "relationship": "has",
+      "source": "SCIENCES",
+      "target": "SCIENCES_Department"
+    },
+    { "relationship": "has", "source": "ENG", "target": "ENG_Department" },
+    { "relationship": "is_a", "source": "CS", "target": "FCIT_Department" },
+    { "relationship": "is_a", "source": "IT", "target": "FCIT_Department" },
+    { "relationship": "is_a", "source": "IS", "target": "FCIT_Department" },
+    {
+      "relationship": "is_a",
+      "source": "Physics",
+      "target": "SCIENCES_Department"
+    },
+    {
+      "relationship": "is_a",
+      "source": "Chemistry",
+      "target": "SCIENCES_Department"
+    },
+    {
+      "relationship": "is_a",
+      "source": "Biology",
+      "target": "SCIENCES_Department"
+    },
+    {
+      "relationship": "is_a",
+      "source": "Mechanical ENG",
+      "target": "ENG_Department"
+    },
+    {
+      "relationship": "is_a",
+      "source": "Computer ENG",
+      "target": "ENG_Department"
+    },
+    {
+      "relationship": "is_a",
+      "source": "Industrial ENG",
+      "target": "ENG_Department"
+    }
+  ]
+}
