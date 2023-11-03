@@ -1,0 +1,313 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    { "id": "KAU" },
+    { "id": "FCIT" },
+    { "id": "SCIENCES" },
+    { "id": "ENG" },
+    { "id": "FCIT_Department" },
+    { "id": "SCIENCES_Department" },
+    { "id": "ENG_Department" },
+    { "id": "CS" },
+    { "id": "IT" },
+    { "id": "IS" },
+    { "id": "Physics" },
+    { "id": "Chemistry" },
+    { "id": "Math" },
+    { "id": "Mechanical ENG" },
+    { "id": "Computer ENG" },
+    { "id": "Industrial ENG" },
+    {
+      "details": { "Course Name": "Programming I", "Department": "CS" },
+      "id": "CPCS-202"
+    },
+    {
+      "details": { "Course Name": "Programming II", "Department": "CS" },
+      "id": "CPCS-203"
+    },
+    {
+      "details": {
+        "Course Name": "Artificial Intelligence I",
+        "Department": "CS"
+      },
+      "id": "CPCS-331"
+    },
+    {
+      "details": { "Course Name": "Technical Writing", "Department": "IT" },
+      "id": "CPIT-221"
+    },
+    {
+      "details": {
+        "Course Name": "Introduction to Computing",
+        "Department": "IT"
+      },
+      "id": "CPIT-201"
+    },
+    {
+      "details": {
+        "Course Name": "Programming and Problem Solving",
+        "Department": "IT"
+      },
+      "id": "CPIT-110"
+    },
+    {
+      "details": {
+        "Course Name": "Introduction to Software Project Management",
+        "Department": "IS"
+      },
+      "id": "CPIS-334"
+    },
+    {
+      "details": {
+        "Course Name": "Professional Computing Issues",
+        "Department": "IS"
+      },
+      "id": "CPIS-428"
+    },
+    {
+      "details": {
+        "Course Name": "Computer Architecture and Organization",
+        "Department": "IS"
+      },
+      "id": "CPIS-210"
+    },
+    {
+      "details": {
+        "Course Name": "General Physics I",
+        "Department": "Physics"
+      },
+      "id": "PHYS-110"
+    },
+    {
+      "details": {
+        "Course Name": "General Physics II",
+        "Department": "Physics"
+      },
+      "id": "PHYS-202"
+    },
+    {
+      "details": {
+        "Course Name": "General Physics III",
+        "Department": "Physics"
+      },
+      "id": "PHYS-203"
+    },
+    {
+      "details": {
+        "Course Name": "General Chemistry I",
+        "Department": "Chemistry"
+      },
+      "id": "CHEM-110"
+    },
+    {
+      "details": {
+        "Course Name": "General Chemistry II",
+        "Department": "Chemistry"
+      },
+      "id": "CHEM-202"
+    },
+    {
+      "details": {
+        "Course Name": "Introduction to Natural Sciences",
+        "Department": "Chemistry"
+      },
+      "id": "CHEM-203"
+    },
+    {
+      "details": { "Course Name": "Calculus I", "Department": "Math" },
+      "id": "MATH-110"
+    },
+    {
+      "details": { "Course Name": "Calculus II", "Department": "Math" },
+      "id": "MATH-202"
+    },
+    {
+      "details": { "Course Name": "Calculus III", "Department": "Math" },
+      "id": "MATH-203"
+    },
+    {
+      "details": {
+        "Course Name": "Mechanics of Materials",
+        "Department": "Mechanical ENG"
+      },
+      "id": "MENG-270"
+    },
+    {
+      "details": {
+        "Course Name": "Machine Dynamics",
+        "Department": "Mechanical ENG"
+      },
+      "id": "MENG-364"
+    },
+    {
+      "details": {
+        "Course Name": "Reverse Engineering",
+        "Department": "Mechanical ENG"
+      },
+      "id": "MENG-408"
+    },
+    {
+      "details": {
+        "Course Name": "Object-Oriented Computer Programming",
+        "Department": "Computer ENG"
+      },
+      "id": "EE-202"
+    },
+    {
+      "details": {
+        "Course Name": "Basic Electrical Circuits",
+        "Department": "Computer ENG"
+      },
+      "id": "EE-250"
+    },
+    {
+      "details": {
+        "Course Name": "Principles of Automatic Control",
+        "Department": "Computer ENG"
+      },
+      "id": "EE-331"
+    },
+    {
+      "details": {
+        "Course Name": "Engineering Economy",
+        "Department": "Industrial ENG"
+      },
+      "id": "IE-255"
+    },
+    {
+      "details": {
+        "Course Name": "Operations Research I",
+        "Department": "Industrial ENG"
+      },
+      "id": "IE-311"
+    },
+    {
+      "details": {
+        "Course Name": "Probability and Engineering Statistics",
+        "Department": "Industrial ENG"
+      },
+      "id": "IE-331"
+    },
+    { "details": { "studentID": 1, "major": "Math" }, "id": "Khalid" },
+    { "details": { "studentID": 2, "major": "IT" }, "id": "Mohammad" },
+    { "details": { "studentID": 3, "major": "IS" }, "id": "Ahmad" },
+    { "details": { "studentID": 4, "major": "CS" }, "id": "Nawaf" }
+  ],
+  "links": [
+    { "relationship": "contains", "source": "KAU", "target": "FCIT" },
+    { "relationship": "contains", "source": "KAU", "target": "SCIENCES" },
+    { "relationship": "contains", "source": "KAU", "target": "ENG" },
+    { "relationship": "has", "source": "FCIT", "target": "FCIT_Department" },
+    {
+      "relationship": "has",
+      "source": "SCIENCES",
+      "target": "SCIENCES_Department"
+    },
+    { "relationship": "has", "source": "ENG", "target": "ENG_Department" },
+    { "relationship": "is_a", "source": "CS", "target": "FCIT_Department" },
+    { "relationship": "Offers", "source": "CS", "target": "CPCS-202" },
+    { "relationship": "Offers", "source": "CS", "target": "CPCS-203" },
+    { "relationship": "Offers", "source": "CS", "target": "CPCS-331" },
+    { "relationship": "is_a", "source": "IT", "target": "FCIT_Department" },
+    { "relationship": "Offers", "source": "IT", "target": "CPIT-221" },
+    { "relationship": "Offers", "source": "IT", "target": "CPIT-201" },
+    { "relationship": "Offers", "source": "IT", "target": "CPIT-110" },
+    { "relationship": "is_a", "source": "IS", "target": "FCIT_Department" },
+    { "relationship": "Offers", "source": "IS", "target": "CPIS-334" },
+    { "relationship": "Offers", "source": "IS", "target": "CPIS-428" },
+    { "relationship": "Offers", "source": "IS", "target": "CPIS-210" },
+    {
+      "relationship": "is_a",
+      "source": "Physics",
+      "target": "SCIENCES_Department"
+    },
+    { "relationship": "Offers", "source": "Physics", "target": "PHYS-110" },
+    { "relationship": "Offers", "source": "Physics", "target": "PHYS-202" },
+    { "relationship": "Offers", "source": "Physics", "target": "PHYS-203" },
+    {
+      "relationship": "is_a",
+      "source": "Chemistry",
+      "target": "SCIENCES_Department"
+    },
+    { "relationship": "Offers", "source": "Chemistry", "target": "CHEM-110" },
+    { "relationship": "Offers", "source": "Chemistry", "target": "CHEM-202" },
+    { "relationship": "Offers", "source": "Chemistry", "target": "CHEM-203" },
+    {
+      "relationship": "is_a",
+      "source": "Math",
+      "target": "SCIENCES_Department"
+    },
+    { "relationship": "Offers", "source": "Math", "target": "MATH-110" },
+    { "relationship": "Offers", "source": "Math", "target": "MATH-202" },
+    { "relationship": "Offers", "source": "Math", "target": "MATH-203" },
+    {
+      "relationship": "is_a",
+      "source": "Mechanical ENG",
+      "target": "ENG_Department"
+    },
+    {
+      "relationship": "Offers",
+      "source": "Mechanical ENG",
+      "target": "MENG-270"
+    },
+    {
+      "relationship": "Offers",
+      "source": "Mechanical ENG",
+      "target": "MENG-364"
+    },
+    {
+      "relationship": "Offers",
+      "source": "Mechanical ENG",
+      "target": "MENG-408"
+    },
+    {
+      "relationship": "is_a",
+      "source": "Computer ENG",
+      "target": "ENG_Department"
+    },
+    { "relationship": "Offers", "source": "Computer ENG", "target": "EE-202" },
+    { "relationship": "Offers", "source": "Computer ENG", "target": "EE-250" },
+    { "relationship": "Offers", "source": "Computer ENG", "target": "EE-331" },
+    {
+      "relationship": "is_a",
+      "source": "Industrial ENG",
+      "target": "ENG_Department"
+    },
+    {
+      "relationship": "Offers",
+      "source": "Industrial ENG",
+      "target": "IE-255"
+    },
+    {
+      "relationship": "Offers",
+      "source": "Industrial ENG",
+      "target": "IE-311"
+    },
+    {
+      "relationship": "Offers",
+      "source": "Industrial ENG",
+      "target": "IE-331"
+    },
+    { "relationship": "Majors_in", "source": "Khalid", "target": "Math" },
+    { "relationship": "enrolled_in", "source": "Khalid", "target": "MATH-203" },
+    { "relationship": "Majors_in", "source": "Mohammad", "target": "IT" },
+    {
+      "relationship": "enrolled_in",
+      "source": "Mohammad",
+      "target": "CPIT-221"
+    },
+    {
+      "relationship": "enrolled_in",
+      "source": "Mohammad",
+      "target": "CPIT-201"
+    },
+    { "relationship": "Majors_in", "source": "Ahmad", "target": "IS" },
+    { "relationship": "enrolled_in", "source": "Ahmad", "target": "CPIS-334" },
+    { "relationship": "enrolled_in", "source": "Ahmad", "target": "CPIS-210" },
+    { "relationship": "Majors_in", "source": "Nawaf", "target": "CS" },
+    { "relationship": "enrolled_in", "source": "Nawaf", "target": "CPCS-203" },
+    { "relationship": "enrolled_in", "source": "Nawaf", "target": "CPCS-331" }
+  ]
+}
