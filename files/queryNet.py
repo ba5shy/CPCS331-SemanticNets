@@ -6,7 +6,6 @@
 
 import graphFunctions as gf
 import mainGraph as mg
-import json
 
 def printMainMenu():
     print("------------------------------------------------------")
@@ -25,7 +24,8 @@ def printDisplayMenu():
     print("1) Planar Layout")
     print("2) Kamada Kawai Layout")
     print("3) Spectral Layout")
-    print("4) Go Back")
+    print("4) Command Line")
+    print("5) Go Back")
     print("------------------------------------------------------\n")
 
 
@@ -94,6 +94,8 @@ while 1:
             elif displayChoice == 3:
                 gf.displayGraphSpectralLayout(graph)
             elif displayChoice == 4:
+                gf.displayGraphCommandLine(graph)
+            elif displayChoice == 5:
                 break
 
 
