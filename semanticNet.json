@@ -3,7 +3,7 @@
   "multigraph": false,
   "graph": {},
   "nodes": [
-    { "id": "KAU" },
+    { "details": { "Location": "Jeddah, Saudi Arabia" }, "id": "KAU" },
     { "id": "FCIT" },
     { "id": "SCIENCES" },
     { "id": "ENG" },
