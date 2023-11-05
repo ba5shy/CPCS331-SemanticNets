@@ -100,62 +100,23 @@ def displayGraphSpectralLayout(graph, centralNode = None):
     plt.title("Graph Visualization")
     plt.show()
 
-# def displayGraph(graph):
-#     pos = nx.spring_layout(graph)
-    
-#     # Create nodes trace
-#     nodes_trace = go.Scatter(
-#         x=[pos[node][0] for node in graph.nodes()],
-#         y=[pos[node][1] for node in graph.nodes()],
-#         mode='markers',
-#         marker=dict(size=20, color='gray', opacity=0.9),
-#         text=[node for node in graph.nodes()],
-#         hoverinfo='text'
-#     )
+def displayGraphCommandLine(graph):
+    # display nodes of the graph
+    # display details of the node 
+    # also display relations of the graph
 
-#     edge_labels = getEdgeLabels(graph)
-    
-#     # Create edges trace
-#     edges_trace = go.Scatter(
-#         x=[],
-#         y=[],
-#         line=dict(width=3, color='black'),
-#         hoverinfo='none',
-#         mode='lines'
-#     )
-
-#     for edge in graph.edges():
-#         x0, y0 = pos[edge[0]]
-#         x1, y1 = pos[edge[1]]
-#         edges_trace['x'] += (x0, x1, None)
-#         edges_trace['y'] += (y0, y1, None)
-
-#     # Create a figure
-#     fig = go.Figure(data=[nodes_trace, edges_trace])
-    
-#     # Add edge labels using annotations
-#     for edge, label in edge_labels.items():
-#         x0, y0 = pos[edge[0]]
-#         x1, y1 = pos[edge[1]]
-#         annotation = go.Annotation(
-#             text=label,
-#             x=(x0 + x1) / 2,
-#             y=(y0 + y1) / 2,
-#             showarrow=False,
-#             font=dict(size=10),
-#         )
-#         fig.add_annotation(annotation)
-    
-#     # Update layout to add a title and make the plot more visually appealing
-#     fig.update_layout(
-#         title_text='Graph Visualization using Plotly',
-#         showlegend=False,
-#         hovermode='closest',
-#         margin=dict(b=0, t=40, l=0, r=0),
-#     )
-    
-#     # Show the plot
-#     fig.show()
+    for i in graph.nodes().data():
+        print(f'Node Name -> {i[0]}')
+        if len(i[1]) > 0:
+            print("\t- Details:")
+            details = i[1]['details']
+            for j in details:
+                print(f'\t\t{j}: {details[j]}')
+        print("\t- Relations:")
+        for j in graph.edges().data(): # for all edges in the graph
+            if j[0] == i[0] or j[1] == i[0]: # i -> node name. j[0] src node, j[1] dest node.
+                relationship = j[2]['relationship']
+                print(f'\t\t{j[0]} {relationship} {j[1]}')
 
 def getEdgeLabels(graph):
     # this method return the labels to use in displaying the graph
@@ -178,7 +139,7 @@ def getNodeInformation(nodeName):
             if len(i[1]) > 0: # if node has details
                 details = i[1]['details']
                 for j in details: # add details to string
-                    information += f'{j}: {details[j]}\n'
+                    information += f'\t{j}: {details[j]}\n'
             else:
                 information = f'Node {nodeName} has no additional details'
             break
@@ -190,7 +151,7 @@ def getNodeRelations(nodeName):
         return f'Node {nodeName} does not exist'
     
     graph = loadGraph()
-    information = f'\nNode {nodeName} Relationships:\n'
+    information = f'Node {nodeName} Relationships:\n'
     informationCheck = information
 
     # edge_details = G.get_edge_data(node1, node2)
@@ -198,7 +159,7 @@ def getNodeRelations(nodeName):
     for i in graph.edges().data():
         if i[0] == nodeName or i[1] == nodeName:
             relationship = i[2]['relationship']
-            information += f'{i[0]} {relationship} {i[1]}\n'
+            information += f'\t{i[0]} {relationship} {i[1]}\n'
 
     # return information
     if information == informationCheck:
@@ -229,5 +190,3 @@ def loadGraph():
     
     return graph
 
-
-getNodeRelations("CPCS-203")
