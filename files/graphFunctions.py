@@ -84,7 +84,7 @@ def displayGraphKamadaKawaiLayout(graph):
 
 def displayGraphSpectralLayout(graph, centralNode = None):
     # Position the nodes using a spring layout algorithm
-    pos = nx.spectral_layout(graph, center=["KAU"])
+    pos = nx.spectral_layout(graph)
 
     # Customize the node and edge attributes as needed
     node_size = 2009
